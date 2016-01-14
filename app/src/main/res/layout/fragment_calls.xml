@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAFF"
+    tools:context="com.omkardokur.calendarlogger.CallsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <TextView
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount of recent calls to save"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvCalls"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:text="-"
+            android:layout_below="@+id/tvCalls"
+            android:layout_alignLeft="@+id/tvCalls"
+            android:id="@+id/decreaseBtnCalls"/>
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/decreaseBtnCalls"
+            android:layout_alignBaseline="@+id/decreaseBtnCalls"
+            android:id="@+id/numberEtCalls"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/numberEtCalls"
+            android:layout_alignBaseline="@+id/numberEtCalls"
+            android:text="+"
+            android:id="@+id/increaseBtnCalls"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Incoming Calls"
+            android:id="@+id/incomingCallsCb"
+            android:layout_below="@+id/increaseBtnCalls"
+            android:layout_alignLeft="@+id/decreaseBtnCalls"
+            android:layout_alignStart="@+id/decreaseBtnCalls"
+            android:layout_marginTop="58dp"
+
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Outgoing Calls"
+            android:id="@+id/outgoingCallsCb"
+            android:layout_below="@+id/incomingCallsCb"
+            android:layout_alignLeft="@+id/incomingCallsCb"
+            android:layout_alignStart="@+id/incomingCallsCb" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Missed Calls"
+            android:id="@+id/missedCallsCb"
+            android:layout_below="@+id/outgoingCallsCb"
+            android:layout_alignLeft="@+id/outgoingCallsCb"
+            android:layout_alignStart="@+id/outgoingCallsCb" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/btnSaveCalls"
+            android:layout_below="@+id/missedCallsCb"
+            android:layout_alignLeft="@+id/missedCallsCb"
+            android:layout_alignStart="@+id/missedCallsCb"
+            android:layout_alignRight="@+id/increaseBtnCalls"
+            android:layout_alignEnd="@+id/increaseBtnCalls" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-- Automatic Settings --"
+            android:id="@+id/autoTvCalls"
+            android:layout_below="@+id/btnSaveCalls"
+            android:layout_alignLeft="@+id/numberEtCalls"
+            android:layout_alignStart="@+id/numberEtCalls" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable"
+            android:id="@+id/enableCbCalls"
+            android:layout_below="@+id/autoTvCalls"
+            android:layout_alignLeft="@+id/btnSaveCalls"
+            android:layout_alignStart="@+id/btnSaveCalls" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

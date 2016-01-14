@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAFF"
+    tools:context="com.omkardokur.calendarlogger.SMSFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount of recent SMS to save"
+        android:gravity="center_horizontal"
+        android:id="@+id/tv"
+        />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:text="-"
+            android:layout_below="@+id/tv"
+            android:layout_alignLeft="@+id/tv"
+            android:id="@+id/decreaseBtn"/>
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/decreaseBtn"
+            android:layout_alignBaseline="@+id/decreaseBtn"
+            android:id="@+id/numberEt"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/numberEt"
+            android:layout_alignBaseline="@+id/numberEt"
+            android:text="+"
+            android:id="@+id/increaseBtn"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Received SMS"
+            android:id="@+id/receivedSmsCb"
+            android:layout_below="@+id/increaseBtn"
+            android:layout_alignLeft="@+id/decreaseBtn"
+            android:layout_alignStart="@+id/decreaseBtn"
+            android:layout_marginTop="58dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Sent SMS"
+            android:id="@+id/sentSmsCb"
+            android:layout_below="@+id/receivedSmsCb"
+            android:layout_alignLeft="@+id/receivedSmsCb"
+            android:layout_alignStart="@+id/receivedSmsCb" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/btnSave"
+            android:layout_below="@+id/sentSmsCb"
+            android:layout_alignLeft="@+id/sentSmsCb"
+            android:layout_alignStart="@+id/sentSmsCb"
+            android:layout_alignRight="@+id/increaseBtn"
+            android:layout_alignEnd="@+id/increaseBtn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-- Automatic Settings --"
+            android:id="@+id/autoTv"
+            android:layout_below="@+id/btnSave"
+            android:layout_alignLeft="@+id/numberEt"
+            android:layout_alignStart="@+id/numberEt" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable"
+            android:id="@+id/enableCb"
+            android:layout_below="@+id/autoTv"
+            android:layout_alignLeft="@+id/btnSave"
+            android:layout_alignStart="@+id/btnSave" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
